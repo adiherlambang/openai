@@ -1,6 +1,9 @@
 import openai
 from flask import jsonify
 import os
+import sys
+
+sys.dont_write_bytecode = True
 
 os.environ['API_KEY'] = 'your_api_key_here'
 
