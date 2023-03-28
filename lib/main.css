@@ -226,6 +226,31 @@ body {
 .chat-container {
     position: relative;
     padding: 1rem;
+    height: 35rem;
+    overflow-x: hidden;
+}
+
+.chatContainerScroll {
+    height: 100%;
+    overflow-y: auto;
+ }
+
+
+#form-message {
+    position: sticky;
+    bottom: 0;
+    padding: 1rem;
+    padding-right: 2rem;
+}
+
+#form-message .input-group {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0;
+}
+
+#form-message .form-control {
+    border-radius: 0;
 }
 
 .chat-container li.chat-left,
@@ -249,6 +274,7 @@ body {
 }
 
 .chat-container li.chat-right {
+    display: flex;
     justify-content: flex-end;
 }
 
@@ -269,7 +295,7 @@ body {
     -moz-border-radius: 4px;
     border-radius: 4px;
     background: #ffffff;
-    font-weight: 300;
+    /* font-weight: 300; */
     line-height: 150%;
     position: relative;
 }
@@ -277,7 +303,7 @@ body {
 .chat-container li .chat-text:before {
     content: '';
     position: absolute;
-    width: 0;
+    width: 1;
     height: 0;
     top: 10px;
     left: -20px;
@@ -306,9 +332,16 @@ body {
     margin: 0 0 0 15px;
 }
 
-.chat-container li .chat-hour>span {
+.chat-container li .chat-hour> .fa-check-circle{
     font-size: 16px;
     color: #9ec94a;
+    margin-left: 5px;
+}
+
+.chat-container li .chat-hour> .fa-exclamation-triangle{
+    font-size: 16px;
+    color: #c13232;
+    margin-left: 5px;
 }
 
 .chat-container li.chat-right>.chat-hour {
@@ -357,7 +390,7 @@ body {
     }
 
     .chat-container li.chat-right .chat-name {
-        margin-right: 5px;
+        /* margin-right: 5px; */
     }
 
     .chat-container li .chat-text {

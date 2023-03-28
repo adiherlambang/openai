@@ -5,11 +5,9 @@ import sys
 
 sys.dont_write_bytecode = True
 
-os.environ['API_KEY'] = 'your_api_key_here'
+os.environ['API_KEY'] = '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'
 
-api_key = os.environ.get('API_KEY')
-
-openai.api_key = ""
+openai.api_key = os.environ.get('API_KEY')
 
 def complete_prompt(prompt):
     response = openai.ChatCompletion.create(
