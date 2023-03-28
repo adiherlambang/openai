@@ -1,5 +1,11 @@
 import openai
 from flask import jsonify
+import os
+
+os.environ['API_KEY'] = 'your_api_key_here'
+
+api_key = os.environ.get('API_KEY')
+
 openai.api_key = ""
 
 def complete_prompt(prompt):
